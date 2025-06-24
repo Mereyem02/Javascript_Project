@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Calendrier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="month">
+            <button onclick="changerMois(-1)">&#10094;</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="changerMois(1)">&#10095;</button>
+        </div>
+        <div class="days">
+            <div>Dim</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mer</div>
+            <div>Jeu</div>
+            <div>Ven</div>
+            <div>Sam</div>
+        </div>
+        <div class="dates" id="dates"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
