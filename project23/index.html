@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Générateur de Carte de Vœux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Générateur de Carte de Vœux</h1>
+
+    <textarea id="message" placeholder="Écris ton message ici..."></textarea>
+
+    <label for="colorPicker">Couleur du texte :</label>
+    <input type="color" id="colorPicker" value="#000000" />
+
+    <label for="bgColorPicker">Couleur de fond :</label>
+    <input type="color" id="bgColorPicker" value="#ffffff" />
+
+    <label for="emojiSelect">Choisis un emoji :</label>
+    <select id="emojiSelect">
+      <option value="🎉">🎉</option>
+      <option value="❤️">❤️</option>
+      <option value="🌟">🌟</option>
+      <option value="🎂">🎂</option>
+      <option value="🎁">🎁</option>
+      <option value="✨">✨</option>
+    </select>
+
+    <button id="generateBtn">Générer la carte</button>
+    <button id="downloadBtn" style="display:none;">Télécharger l'image</button>
+
+    <div id="cardPreview"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
