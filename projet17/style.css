@@ -1,0 +1,111 @@
+/* Reset basique */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  padding: 3rem 4rem;
+  border-radius: 20px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.12);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #4b0082;
+  letter-spacing: 1px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+input[type="email"]:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 8px rgba(118, 75, 162, 0.6);
+}
+
+button {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #5a67d8 0%, #5b3e96 100%);
+  box-shadow: 0 6px 20px rgba(91, 62, 150, 0.6);
+}
+
+#message {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #28a745;
+  font-weight: 600;
+  min-height: 1.2em;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#message.show {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+#message {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  min-height: 1.2em; /* pour garder la place même quand vide */
+}
+
+#message.visible {
+  opacity: 1;
+}
